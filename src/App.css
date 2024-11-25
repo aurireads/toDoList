@@ -1,38 +1,381 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+  display: flex; /* Habilita o flexbox */
+  justify-content: space-between; /* Espaço entre os itens */
+  align-items: center; /* Alinha verticalmente no centro */
+  padding: 0 45px 50px; /* Espaçamento interno para as laterais */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo img{
+  height: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-menu a {
+  display: inline-block; /* Necessário para o padding funcionar corretamente */
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  text-decoration: none; /* Remove o sublinhado */
+  padding: 10px 25px; /* Espaçamento interno */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 14px; /* Tamanho da fonte */
+  transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+
+a {
+  text-align: right;
+
+}
+
+.center {
+  max-width: 960px;
+  margin-left: 50px;
   display: flex;
-  flex-direction: column;
+  
+}
+
+.middle {
+  width: 621px; /* Largura definida no Figma */
+  height: 131px; /* Altura definida no Figma */
+  text-align: left; /* Alinha o texto à esquerda */
+  
+}
+
+.middle h2 {
+  font-family: 'Montserrat', sans-serif; /* Fonte definida no Figma */
+  font-weight: 700; /* Peso da fonte */
+  font-size: 80px; /* Tamanho da fonte */
+  line-height: 64px; /* Altura da linha */
+  margin-bottom: 40px; /* Espaçamento entre o título e o próximo elemento */
+
+}
+
+.middle h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px; /* Ajuste para subtítulos */
+  margin-bottom: 25px;
+  color: #4AC959;
+  ;
+}
+
+.middle p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px; /* Tamanho de parágrafo */
+  margin-bottom: 20px;
+}
+
+.middle button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  background: #4AC959;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.middle button:hover {
+  background: #4AC959;
+}
+
+.image-container {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.main{
+  padding: 30px 0;
+}
+
+h2 {
+  width: 621px;
+height: 35px;
+top: 208px;
+left: 80px;
+
+}
+
+.image-container {
+  position: relative; /* Define o contêiner como referência */
+  width: 500px; /* Largura do contêiner */
+  height: 300px; /* Altura do contêiner */
+  display: flex; /* Habilita flexbox */
+  justify-content: flex-end; /* Move os itens para o lado direito */
+  margin-left: auto; /* Empurra o contêiner para o lado direito da página */
+
+}
+
+.bg-image {
+  position: absolute; /* Ocupa o fundo do contêiner */
+
+  width: 110%; /* Faz a imagem ocupar toda a largura do contêiner */
+  height: 100%; /* Faz a imagem ocupar toda a altura do contêiner */
+  z-index: 1; /* Camada inferior */
+  padding-right: 20px;
+}
+
+.foto-image {
+  position: absolute; /* Necessário para centralizar dentro do contêiner */
+  top: 50%; /* Posiciona 50% a partir do topo do contêiner */
+  left: 50%; /* Posiciona 50% a partir da esquerda do contêiner */
+  transform: translate(-50%, -50%); /* Centraliza em relação ao ponto de referência */
+  z-index: 2; /* Camada superior */
+  width: 190px; /* Ajusta o tamanho da imagem superior */
+  height: auto; /* Mantém proporções */
+}
+
+.foto-black {
+  position: absolute; /* Necessário para centralizar dentro do contêiner */
+  top: 50%; /* Posiciona 50% a partir do topo do contêiner */
+  left: 50%; /* Posiciona 50% a partir da esquerda do contêiner */
+  transform: translate(-50%, -50%); /* Centraliza em relação ao ponto de referência */
+  z-index: 2; /* Camada superior */
+  width: 190px; /* Ajusta o tamanho da imagem superior */
+  height: auto; /* Mantém proporções */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  margin-left: 50px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-header.to-do {
+  border-top: 6px solid orange;
+}
+
+.card-header.done {
+  border-top: 6px solid green;
+}
+
+.card-subtitle {
+  text-align: center;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 5px;
+}
+
+ul li .task-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ul li .task-text span {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+ul li .task-text span.checked {
+  border-color: green;
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul li .delete {
+  font-size: 0.9em;
+  color: red;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
 }
+
+button:hover {
+  background-color: #333;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+  border-color: orange;
+}
+
+.task-text span {
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.task-text span:hover {
+  border-color: orange;
+  background-color: orange;
+}
+
+/* Alteração do cursor ao arrastar */
+li {
+  cursor: grab;
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+li:active {
+  cursor: grabbing;
+}
+
+.card {
+  border: 2px dashed transparent;
+  transition: border-color 0.3s;
+}
+
+.card:hover {
+  border-color: lightblue;
+}
+
+/* Destaque da área ao arrastar */
+.card.drag-over {
+  border-color: orange;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.add-task button {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: white;
+  background-color: orange;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task button:hover {
+  background-color: darkorange;
+}
+.add-task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.add-task button {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: white;
+  background-color: orange;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task button:hover {
+  background-color: darkorange;
+}
+
+.erase-all {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.erase-all button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.erase-all button:hover {
+  background-color: darkred;
+}
+
+
