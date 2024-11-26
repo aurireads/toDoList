@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 // Importações do Swiper
@@ -16,15 +16,28 @@ const slide_image_3 = "/images/3.png";
 
 function App() {
   // Estados para armazenar as tarefas
-  const [toDoTasks, setToDoTasks] = useState([
-    "Develop the To-do list page",
-    "Create the drag-and-drop function",
-    "Add new tasks",
-    "Delete items",
-  ]);
+  const [toDoTasks, setToDoTasks] = useState([]);
   const [doneTasks, setDoneTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [draggedTask, setDraggedTask] = useState(null);
+
+
+  //login 
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginData, setLoginData] = useState({ username: "", password: "" });
+
+  const handleLoginChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData({ ...loginData, [name]: value });
+  };
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    alert(`Bem-vindo(a), ${loginData.username}!`);
+    setIsLoginModalOpen(false);
+    setLoginData({ username: "", password: "" });
+  };
 
   // Estados do formulário
   const [formData, setFormData] = useState({
@@ -55,6 +68,19 @@ function App() {
       message: "",
     });
   };
+
+    useEffect(() => {
+    const savedToDoTasks = JSON.parse(localStorage.getItem("toDoTasks")) || [];
+    const savedDoneTasks = JSON.parse(localStorage.getItem("doneTasks")) || [];
+    setToDoTasks(savedToDoTasks);
+    setDoneTasks(savedDoneTasks);
+  }, []);
+
+  // Salvar tarefas no localStorage ao atualizá-las
+  useEffect(() => {
+    localStorage.setItem("toDoTasks", JSON.stringify(toDoTasks));
+    localStorage.setItem("doneTasks", JSON.stringify(doneTasks));
+  }, [toDoTasks, doneTasks]);
 
   // Funções para tarefas
   const addTask = () => {
@@ -96,6 +122,7 @@ function App() {
     }
   };
 
+
   return (
     <div className="App">
       {/* Menu */}
@@ -104,8 +131,52 @@ function App() {
           <img src="/images/icon.png" alt="Logo" />
         </div>
         <div className="item-menu">
-          <a href="#">Entrar</a>
+          <button onClick={() => setIsLoginModalOpen(true)}>Entrar</button>
         </div>
+            {/* Modal de Login */}
+{isLoginModalOpen && (
+  <div className="modal-overlay">
+    <div className="modal">
+      <span
+        className="modal-close"
+        onClick={() => setIsLoginModalOpen(false)}
+      >
+        close
+      </span>
+      <div className="sign-in">
+      <h2>Sign in</h2>
+      </div>
+      <div className="acess-list">
+      <p>to access your list</p>
+      </div>
+      <form onSubmit={handleLoginSubmit}>
+        <label htmlFor="username">User:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          value={loginData.username}
+          onChange={handleLoginChange}
+          required
+        />
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          value={loginData.password}
+          onChange={handleLoginChange}
+          required
+        />
+        <button type="submit">Sign in</button>
+      </form>
+     
+    </div>
+  </div>
+)}
+
       </div>
 
       {/* Centro */}
@@ -248,7 +319,9 @@ function App() {
           <button className="button-form" type="submit">Send Now</button>
         </form>
       </div>
+    
     </div>
+    
   );
 }
 
