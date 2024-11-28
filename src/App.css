@@ -17,74 +17,38 @@
   height: 40px;
 }
 
-.modal-overlay {
+/* Estilos para o modal */
+.login-modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Certifique-se de que o modal aparece por cima */
 }
 
-.modal {
-  background: #fff;
-  border-radius: 8px;
-  width: 400px;
+.login-modal-content {
+  background-color: white;
   padding: 20px;
+  border-radius: 8px;
+  width: 300px;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
-.modal h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #000;
-}
-
-.modal p {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 20px;
-}
-
-.modal input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.modal button {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+button {
   margin-top: 10px;
 }
 
-.modal button:hover {
-  background-color: #218838;
+
+.sign-in-img{
+  width: 100px;
+  height: 100px;
 }
 
-.modal .modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: #333;
-  font-weight: bold;
-}
 .sign-in {
   display: flex;
 }
