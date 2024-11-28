@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+import RoutesApp from "./routes";
+import { AuthProvider } from "./contexts/auth";
+
 // Importações do Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -27,6 +30,14 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginData, setLoginData] = useState({ username: "", password: "" });
 
+  useEffect(() => {
+    const savedUser = localStorage.getItem("loggedInUser");
+    if (savedUser) {
+      setIsLoggedIn(true);
+      setLoginData({ username: savedUser, password: "" });
+    }
+  }, []);
+  
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
     setLoginData({ ...loginData, [name]: value });
@@ -38,6 +49,13 @@ function App() {
     setIsLoginModalOpen(false);
     setLoginData({ username: "", password: "" });
   };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false); // Define como não logado
+    setLoginData({ username: "", password: "" }); // Limpa os dados do login
+    localStorage.removeItem("loggedInUser"); // Remove o usuário armazenado no localStorage (se existir)
+  };
+  
 
   // Estados do formulário
   const [formData, setFormData] = useState({
@@ -125,59 +143,27 @@ function App() {
 
   return (
     <div className="App">
-      {/* Menu */}
-      <div className="menu">
-        <div className="logo">
-          <img src="/images/icon.png" alt="Logo" />
-        </div>
-        <div className="item-menu">
-          <button onClick={() => setIsLoginModalOpen(true)}>Entrar</button>
-        </div>
-            {/* Modal de Login */}
-{isLoginModalOpen && (
-  <div className="modal-overlay">
-    <div className="modal">
-      <span
-        className="modal-close"
-        onClick={() => setIsLoginModalOpen(false)}
-      >
-        close
-      </span>
-      <div className="sign-in">
-      <h2>Sign in</h2>
-      </div>
-      <div className="acess-list">
-      <p>to access your list</p>
-      </div>
-      <form onSubmit={handleLoginSubmit}>
-        <label htmlFor="username">User:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Enter your username"
-          value={loginData.username}
-          onChange={handleLoginChange}
-          required
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          value={loginData.password}
-          onChange={handleLoginChange}
-          required
-        />
-        <button type="submit">Sign in</button>
-      </form>
-     
-    </div>
+{/* Menu */}
+<div className="menu">
+  <div className="logo">
+    <img src="/images/icon.png" alt="Logo" />
   </div>
-)}
+  <div className="item-menu">
+    {isLoggedIn ? (
+      <>
+        <span>Welcome, {loginData.username}!</span>
+        <button onClick={handleLogout}>Logout</button>
+      </>
+    ) : (
+      <button onClick={() => setIsLoginModalOpen(true)}>Entrar</button>
+    )}
+  </div>
 
-      </div>
+  <AuthProvider>
+    <RoutesApp />
+  </AuthProvider>
+
+</div>
 
       {/* Centro */}
       <div className="center">

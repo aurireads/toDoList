@@ -1,0 +1,81 @@
+/* Modal principal */
+.modal-container {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Botão de fechar */
+  .modal-container .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .modal-container .close-btn:hover {
+    color: #000;
+  }
+  
+  /* Imagem no topo */
+  .modal-container .modal-image {
+    width: 80px; /* Ajuste o tamanho aqui */
+    height: 80px; /* Ajuste o tamanho aqui */
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 50%; /* Torna a imagem circular, se necessário */
+  }
+  
+  /* Título */
+  .modal-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Subtítulo */
+  .modal-container p {
+    font-size: 16px;
+    color: #4caf50;
+    margin-bottom: 20px;
+  }
+  
+  /* Campos de entrada */
+  .modal-container input[type="text"],
+  .modal-container input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Botão de login */
+  .modal-container button {
+    width: 90%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .modal-container button:hover {
+    background-color: #45a049;
+  }
+  
