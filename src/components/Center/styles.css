@@ -1,0 +1,88 @@
+.center {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 1200px;
+  }
+
+.middle button {
+    width: 300px;
+    height: 64px;
+    top: 250px;
+    border-radius: 10px;
+    position: absolute;
+    color: #fff;
+    background: #4AC959;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29.26px;
+    text-align: center;
+    font-style: normal;
+}
+
+.middle h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 64px;
+    margin-bottom: 35px;
+  }
+  
+  .middle h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 64px;
+    color: #4AC959;
+  }
+  
+  .middle p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 40px;
+  }
+  
+  
+  .middle button:hover {
+    background: #4AC959;
+  }
+
+  .middle {
+    width: 621px;
+    height: 319px;
+    text-align: left;
+    position: absolute;
+    top: 208px;
+    left: 80px;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  
+  .bg-image {
+    position: absolute;
+    width: 640px;
+    height: 734px;
+    z-index: -10;
+    margin-top: 40px;
+  }
+  
+  .foto-image {
+    position: absolute;
+    top: 380px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 443px;
+  }
+  

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menu.css";
+import "./styles.css";
 
 const Menu = ({ isLoggedIn, loginData, handleLogout, setIsLoginModalOpen }) => {
   return (
@@ -14,7 +14,7 @@ const Menu = ({ isLoggedIn, loginData, handleLogout, setIsLoginModalOpen }) => {
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
-          <button onClick={() => setIsLoginModalOpen(true)}>Entrar</button>
+          <button onClick={() => setIsLoginModalOpen(true)}>entrar</button>
         )}
       </div>
     </div>

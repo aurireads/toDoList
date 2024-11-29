@@ -1,5 +1,5 @@
 import React from "react";
-import "./Form.css";
+import "./style.css";
 
 const Form = ({ formData, handleChange, handleSubmit }) => {
   return (
