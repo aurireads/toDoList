@@ -15,7 +15,9 @@ const ToDoList = ({
   return (
     <div className="container">
       <div className="card to-do" onDragOver={(e) => e.preventDefault()} onDrop={() => handleDrop("toDo")}>
-        <div className="card-header">To-do</div>
+        <div className={`card-header ${toDoTasks.length > 0 ? "to-do" : "done"}`}>
+          To-do
+        </div>
         <div className="card-subtitle">Take a breath. Start doing.</div>
         <ul>
           {toDoTasks.map((task, index) => (
@@ -36,7 +38,9 @@ const ToDoList = ({
       </div>
 
       <div className="card done" onDragOver={(e) => e.preventDefault()} onDrop={() => handleDrop("done")}>
-        <div className="card-header">Done</div>
+        <div className={`card-header ${doneTasks.length > 0 ? "done" : "to-do"}`}>
+          Done
+        </div>
         <div className="card-subtitle">Congratulations! You have done {doneTasks.length} tasks</div>
         <ul>
           {doneTasks.map((task, index) => (
