@@ -1,10 +1,49 @@
-/* Container para os cards */
+/* Container principal */
 .container {
   display: flex;
   gap: 20px;
   margin-left: 50px;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
+
+/* Cabeçalho com imagem e texto */
+/* Cabeçalho com imagem e texto */
+.header {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%; /* Posiciona verticalmente no meio */
+  left: 50%; /* Posiciona horizontalmente no meio */
+  transform: translate(-50%, -50%); /* Ajusta para que o centro fique exatamente no meio */
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a legibilidade */
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-text p {
+  position: absolute;
+  top: 60%; /* Coloca o parágrafo um pouco abaixo do título */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a legibilidade */
+  color: white;
+}
+
 
 /* Estilo para cada card */
 .card {
@@ -16,6 +55,7 @@
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.3s, transform 0.3s; /* Transições suaves */
+  margin-bottom: 30px;
 }
 
 /* Estilos para os headers dos cards (To-do e Done) */

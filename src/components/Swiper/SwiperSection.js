@@ -6,13 +6,19 @@ import "./styles.css";
 const SwiperSection = ({ images }) => {
   return (
     <div className="swiper-container">
-      <h1 className="heading">good things</h1>
+      <h1 className="heading">Good Things</h1>
       <Swiper
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView="auto"
+        slidesPerView={1} // Apenas 1 slide visível por vez
+        spaceBetween={0} // Remove espaçamento entre os slides
+        breakpoints={{
+          768: {
+            slidesPerView: 1, // Configuração para telas maiores (pode ajustar para 2 ou 3 conforme necessário)
+          },
+        }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,

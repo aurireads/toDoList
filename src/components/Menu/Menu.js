@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal"; // Importando o componente Modal
 import "./styles.css";
 
-const Menu = ({ isLoggedIn, loginData, handleLogout, setIsLoginModalOpen }) => {
+const Menu = ({ isLoggedIn, loginData, handleLogout }) => {
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
   return (
     <div className="menu">
       <div className="logo">
@@ -14,9 +25,12 @@ const Menu = ({ isLoggedIn, loginData, handleLogout, setIsLoginModalOpen }) => {
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
-          <button onClick={() => setIsLoginModalOpen(true)}>entrar</button>
+          <button onClick={handleOpenModal}>Entrar</button>
         )}
       </div>
+
+      {/* Modal de Login */}
+      <Modal isOpen={isLoginModalOpen} closeModal={handleCloseModal} />
     </div>
   );
 };

@@ -1,88 +1,82 @@
 /* Container do swiper */
 .swiper-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Garante que os slides não transbordem */
-    position: relative;
-  }
-  
-  /* Estilo de cada slide */
-  .swiper-slide {
-    width: 80%; /* Você pode ajustar conforme o tamanho que deseja para os slides */
-    margin: 0 10px; /* Espaçamento entre os slides */
-    background-color: #f0f0f0; /* Cor de fundo de cada slide */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px; /* Bordas arredondadas para o slide */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras para destacar o slide */
-    transition: transform 0.3s ease; /* Transição suave */
-  }
-  
-  /* Estilo para a imagem dentro do slide */
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordas arredondadas para a imagem */
-  }
-  
-  /* Título da seção (opcional) */
-  .heading {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Botões de navegação (para deslizar para a direita e esquerda) */
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #fff; /* Cor dos botões de navegação */
-    font-size: 2rem; /* Tamanho do botão */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo dos botões */
-    border-radius: 50%; /* Botões redondos */
-    padding: 10px; /* Tamanho dos botões */
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    transform: translateY(-50%);
-  }
-  
-  /* Estilo para o botão de navegação para a direita */
-  .swiper-button-next {
-    right: 10px;
-  }
-  
-  /* Estilo para o botão de navegação para a esquerda */
-  .swiper-button-prev {
-    left: 10px;
-  }
-  
-  /* Controles de paginação (bolinhas) */
-  .swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  /* Estilo para as bolinhas de paginação */
-  .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #fff; /* Cor das bolinhas */
-    opacity: 0.5;
-    border-radius: 50%;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Estilo para as bolinhas ativas */
-  .swiper-pagination-bullet-active {
-    opacity: 1;
-    transform: scale(1.2); /* Aumenta o tamanho da bolinha ativa */
-    background-color: orange; /* Cor da bolinha ativa */
-  }
-  
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Garante que os slides não transbordem */
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo de cada slide */
+.swiper-slide {
+  width: 100%; /* Cada slide ocupa a largura total do container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+/* Estilo para a imagem dentro do slide */
+.swiper-slide img {
+  width: auto;
+  height: auto;
+  max-width: 100%; /* Ajusta o tamanho da imagem ao slide */
+  object-fit: contain; /* Ajusta a imagem ao container sem distorcer */
+}
+
+/* Título da seção */
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Botões de navegação (para deslizar para a direita e esquerda) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Controles de paginação (bolinhas) */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+  background-color: orange;
+}
