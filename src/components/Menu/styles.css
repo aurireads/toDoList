@@ -1,3 +1,28 @@
+
+
+.item-menu button {
+    width: 120px;
+    height: 40px;
+    border-radius: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    padding: 5px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 217px;
+    height: 50px;
+    top: 54px;
+    left: 80px;
+    margin-top: 20px;
+}
 /* Estilos do Modal */
 .modal-overlay {
     position: fixed;
