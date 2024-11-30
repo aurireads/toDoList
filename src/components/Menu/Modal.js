@@ -1,25 +1,28 @@
-import React from 'react';
+import React from "react";
 import "./styles.css";
 
 const Modal = ({ isOpen, closeModal }) => {
-  if (!isOpen) return null; 
+  if (!isOpen) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <h2>Login</h2>
+      <button className="close-button" onClick={closeModal}>
+  ×
+</button>
+        <img 
+          src="/images/login.png" 
+          alt="Login Icon"
+        />
+        <h2>Sign in</h2>
+        <p>to access your list</p>
         <form>
-          <label>
-            Usuário:
-            <input type="text" name="username" />
-          </label>
-          <label>
-            Senha:
-            <input type="password" name="password" />
-          </label>
-          <button type="submit">Entrar</button>
+          <label htmlFor="username">User:</label>
+          <input type="text" id="username" name="username" />
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" name="password" />
+          <button type="submit">Sign in</button>
         </form>
-        <button onClick={closeModal}>Fechar</button>
       </div>
     </div>
   );

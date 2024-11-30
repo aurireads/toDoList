@@ -19,7 +19,6 @@ const Menu = ({ isLoggedIn, loginData, handleLogout }) => {
   return (
     <div className="menu">
       <div className="logo">
-        <img src="/images/icon.png" alt="Logo" />
       </div>
       <div className="item-menu">
         {isLoggedIn ? (

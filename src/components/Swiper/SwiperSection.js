@@ -6,6 +6,8 @@ import "./styles.css";
 const SwiperSection = ({ images }) => {
   return (
     <div className="swiper-container">
+              <img src="/images/Green.png" alt="Background" className="bg-image" />
+
       <h1 className="heading">Good Things</h1>
       <Swiper
         effect="coverflow"

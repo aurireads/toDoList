@@ -1,25 +1,81 @@
-.item-menu button {
-  width: 120px;
-  height: 40px;
-  border-radius: 0;
+.modal-content {
+  background: white;
+  width: 400px; /* Largura do modal */
+  padding: 40px 30px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra para destaque */
+  position: relative;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  display: flex;
-  justify-content: center;
-  letter-spacing: 1px;
-  padding: 5px;
-  align-items: center;
-  margin-top: 20px;
+  text-align: left; /* Alinhamento à esquerda */
 }
 
-.logo {
-  width: 217px;
-  height: 50px;
-  top: 54px;
-  left: 80px;
-  margin-top: 20px;
+.modal-content img {
+  width: 60px; /* Tamanho da imagem no topo */
+  height: auto;
+  margin-bottom: 20px; /* Espaçamento entre a imagem e o título */
+}
+
+.modal-content h2 {
+  font-size: 28px; /* Tamanho maior do título */
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #2a5d35; /* Verde para o subtítulo */
+  margin-bottom: 30px;
+}
+
+.modal-content label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #2a5d35; /* Verde do botão */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #1e4b28; /* Verde mais escuro no hover */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px; /* Ajuste a posição no topo */
+  right: 10px; /* Ajuste a posição à direita */
+  font-size: 18px; /* Tamanho do "X" */
+  font-weight: bold;
+  color: #000; /* Cor do "X" */
+  background: none; /* Remove o fundo */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Mostra o ponteiro ao passar o mouse */
+  padding: 0; /* Remove qualquer padding */
+  line-height: 1; /* Mantém o alinhamento correto */
+}
+
+.close-button:hover {
+  color: #666; /* Muda a cor ao passar o mouse (opcional) */
 }
 
 .modal-overlay {
@@ -28,62 +84,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semitransparente */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  width: 300px;
-  text-align: center;
-}
-
-button {
-  margin-top: 10px;
-}
-
-@media (max-width: 1024px) {
-  .logo {
-    width: 150px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    font-size: 1.5rem;
-  }
-
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-  }
-
-  .heading {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .item-menu button {
-    width: 100px;
-    height: 35px;
-    font-size: 12px;
-  }
-
-  .logo {
-    width: 130px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    font-size: 1.2rem;
-  }
-
-  .heading {
-    font-size: 1.2rem;
-  }
 }
