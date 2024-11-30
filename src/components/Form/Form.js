@@ -4,7 +4,10 @@ import "./style.css";
 const Form = ({ formData, handleChange, handleSubmit }) => {
   return (
     <div className="form-container">
+      <img src="/images/icon-mail.png" className="icon-mail" alt="Illustration" />
+
       <img src="/images/tatiana.png" className="img-form" alt="Illustration" />
+
       <h1>Get in Touch</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Your name</label>
