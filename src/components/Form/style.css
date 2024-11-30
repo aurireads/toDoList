@@ -32,11 +32,30 @@
   margin: auto;
 }
 
-/* Adicionando bordas arredondadas à imagem */
 .img-form {
-  border-radius: 50%; /* Faz a imagem ficar com bordas redondas */
-  width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-  height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-  object-fit: cover; /* Garante que a imagem não distorça ao se ajustar ao tamanho */
-  margin-bottom: 20px; /* Adiciona um pequeno espaço abaixo da imagem */
+  border-radius: 50%; 
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover; 
+  margin-bottom: 20px; 
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .form-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-container p {
+    font-size: 1rem;
+  }
+
+  .img-form {
+    width: 120px;
+    height: 120px;
+  }
 }

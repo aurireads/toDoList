@@ -1,4 +1,3 @@
-/* Modal principal */
 .modal-container {
     position: relative;
     width: 400px;
@@ -10,7 +9,6 @@
     font-family: Arial, sans-serif;
   }
   
-  /* Botão de fechar */
   .modal-container .close-btn {
     position: absolute;
     top: 10px;
@@ -25,30 +23,26 @@
     color: #000;
   }
   
-  /* Imagem no topo */
   .modal-container .modal-image {
-    width: 80px; /* Ajuste o tamanho aqui */
-    height: 80px; /* Ajuste o tamanho aqui */
+    width: 80px;
+    height: 80px; 
     margin: 0 auto 20px;
     display: block;
-    border-radius: 50%; /* Torna a imagem circular, se necessário */
+    border-radius: 50%; 
   }
   
-  /* Título */
   .modal-container h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 10px;
   }
   
-  /* Subtítulo */
   .modal-container p {
     font-size: 16px;
     color: #4caf50;
     margin-bottom: 20px;
   }
   
-  /* Campos de entrada */
   .modal-container input[type="text"],
   .modal-container input[type="password"] {
     width: 90%;
@@ -61,7 +55,6 @@
     margin-right: auto;
   }
   
-  /* Botão de login */
   .modal-container button {
     width: 90%;
     padding: 10px;

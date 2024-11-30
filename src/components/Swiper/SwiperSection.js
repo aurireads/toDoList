@@ -12,11 +12,11 @@ const SwiperSection = ({ images }) => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={1} // Apenas 1 slide visível por vez
-        spaceBetween={0} // Remove espaçamento entre os slides
+        slidesPerView={1} 
+        spaceBetween={0} 
         breakpoints={{
           768: {
-            slidesPerView: 1, // Configuração para telas maiores (pode ajustar para 2 ou 3 conforme necessário)
+            slidesPerView: 1, 
           },
         }}
         coverflowEffect={{

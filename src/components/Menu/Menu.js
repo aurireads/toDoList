@@ -3,7 +3,7 @@ import Modal from "./Modal"; // Importando o componente Modal
 import "./styles.css";
 
 const Menu = ({ isLoggedIn, loginData, handleLogout }) => {
-  // Definindo o estado para controlar a abertura/fechamento do modal
+  // Aqui é definido o estado para controlar a abertura e o fechamento do modal
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   // Função para abrir o modal
@@ -32,8 +32,6 @@ const Menu = ({ isLoggedIn, loginData, handleLogout }) => {
           <button onClick={handleOpenModal}>Entrar</button>
         )}
       </div>
-
-      {/* Modal de Login */}
       <Modal isOpen={isLoginModalOpen} closeModal={handleCloseModal} />
     </div>
   );

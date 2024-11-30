@@ -24,8 +24,12 @@ export const useToDoTasks = () => {
     }
   };
 
-  const deleteTask = (index) => {
-    setDoneTasks(doneTasks.filter((_, i) => i !== index));
+  const deleteTask = (index, list) => {
+    if (list === "toDo") {
+      setToDoTasks(toDoTasks.filter((_, i) => i !== index));
+    } else {
+      setDoneTasks(doneTasks.filter((_, i) => i !== index));
+    }
   };
 
   const eraseAll = (list) => {
@@ -33,6 +37,27 @@ export const useToDoTasks = () => {
       setToDoTasks([]);
     } else if (list === "done") {
       setDoneTasks([]);
+    }
+  };
+
+  const handleDrop = (task, targetList) => {
+    if (!Array.isArray(toDoTasks) || !Array.isArray(doneTasks)) {
+      console.error("As listas de tarefas não estão corretamente definidas.");
+      return;
+    }
+
+    if (targetList === "done") {
+      const updatedToDoTasks = toDoTasks.filter((t) => t !== task);
+      const updatedDoneTasks = [...doneTasks, task];
+      setToDoTasks(updatedToDoTasks);
+      setDoneTasks(updatedDoneTasks);
+    }
+
+    else if (targetList === "toDo") {
+      const updatedDoneTasks = doneTasks.filter((t) => t !== task);
+      const updatedToDoTasks = [...toDoTasks, task];
+      setToDoTasks(updatedToDoTasks);
+      setDoneTasks(updatedDoneTasks);
     }
   };
 
@@ -44,5 +69,6 @@ export const useToDoTasks = () => {
     addTask,
     deleteTask,
     eraseAll,
+    handleDrop,
   };
 };
