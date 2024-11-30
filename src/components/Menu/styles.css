@@ -1,3 +1,18 @@
+.button-login {
+  font-size: 14px; /* Tamanho da fonte menor */
+  padding: 5px 10px; /* Reduz o espaçamento interno */
+  background-color: black; /* Verde para o botão */
+  color: white; /* Texto branco */
+  border: none; /* Remove borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostra o ponteiro ao passar o mouse */
+  transition: background-color 0.3s ease; /* Transição suave no hover */
+}
+
+.button-login:hover {
+  background-color: #3c9e47; /* Verde mais escuro no hover */
+}
+
 .modal-content {
   background: white;
   width: 400px; /* Largura do modal */
@@ -73,7 +88,6 @@
   transform: scale(1.2); /* Leve aumento no hover para destacar */
   transition: transform 0.2s ease; /* Transição suave no hover */
 }
-
 
 .modal-overlay {
   position: fixed;

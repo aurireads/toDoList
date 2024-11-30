@@ -28,7 +28,10 @@ const Menu = ({ isLoggedIn, loginData, handleLogout }) => {
           </>
         ) : (
           // Quando o usuário não está logado, exibimos o botão "Entrar" que abre o modal
-          <button onClick={handleOpenModal}>Entrar</button>
+          <button className="button-login" onClick={handleOpenModal}>
+  Entrar
+</button>
+
         )}
       </div>
       <Modal isOpen={isLoginModalOpen} closeModal={handleCloseModal} />
