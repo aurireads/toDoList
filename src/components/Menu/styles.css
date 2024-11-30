@@ -16,7 +16,7 @@
 }
 
 .modal-content h2 {
-  font-size: 28px; /* Tamanho maior do título */
+  font-size: 38px; /* Tamanho maior do título */
   font-weight: bold;
   color: #000;
   margin-bottom: 10px;
@@ -45,14 +45,8 @@
 }
 
 .modal-content button {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: #2a5d35; /* Verde do botão */
+  color: black;/* Verde do botão */
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -62,21 +56,24 @@
 
 .close-button {
   position: absolute;
-  top: 10px; /* Ajuste a posição no topo */
-  right: 10px; /* Ajuste a posição à direita */
-  font-size: 18px; /* Tamanho do "X" */
-  font-weight: bold;
+  top: 5px; /* Mais próximo do topo */
+  right: 5px; /* Mais próximo do canto direito */
+  font-size: 12px; /* Diminui o tamanho do texto do botão */
+  font-weight: bold; /* Mantém o texto em negrito */
   color: #000; /* Cor do "X" */
-  background: none; /* Remove o fundo */
-  border: none; /* Remove a borda */
-  cursor: pointer; /* Mostra o ponteiro ao passar o mouse */
+  background: none; /* Remove o fundo do botão */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Mostra o ponteiro de mão ao passar o mouse */
   padding: 0; /* Remove qualquer padding */
-  line-height: 1; /* Mantém o alinhamento correto */
+  line-height: 1; /* Garante alinhamento correto */
 }
 
 .close-button:hover {
-  color: #666; /* Muda a cor ao passar o mouse (opcional) */
+  color: #666; /* Altera a cor ao passar o mouse */
+  transform: scale(1.2); /* Leve aumento no hover para destacar */
+  transition: transform 0.2s ease; /* Transição suave no hover */
 }
+
 
 .modal-overlay {
   position: fixed;
@@ -89,4 +86,8 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+.button-submit {
+  background: #4AC959;
 }
