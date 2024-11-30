@@ -1,33 +1,26 @@
-.menu {
-    top: 24px;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.item-menu button {
-    width: 120px;
-    height: 40px;
-    border-radius: 0;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
+/* Estilos do Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
     display: flex;
     justify-content: center;
-    letter-spacing: 1px;
-    padding: 5px;
     align-items: center;
-    margin-top: 20px;
-}
-
-.logo {
-    width: 217px;
-    height: 50px;
-    top: 54px;
-    left: 80px;
-    margin-top: 20px;
-}
-
+    z-index: 1000; /* Garante que o modal fique sobre outros elementos */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
