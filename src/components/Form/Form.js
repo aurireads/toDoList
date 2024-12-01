@@ -4,11 +4,18 @@ import "./style.css";
 const Form = ({ formData, handleChange, handleSubmit }) => {
   return (
     <div className="form-container">
-      <img src="/images/icon-mail.png" className="icon-mail" alt="Illustration" />
+      {/* Seção de título e ícone */}
+      <div className="form-header">
+        <img src="/images/icon-mail.png" className="icon-mail" alt="Mail Icon" />
+        <h1>
+          GET IN <span>TOUCH</span>
+        </h1>
+      </div>
 
+      {/* Imagem circular superior */}
       <img src="/images/tatiana.png" className="img-form" alt="Illustration" />
 
-      <h1>Get in Touch</h1>
+      {/* Formulário */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Your name</label>
         <input
