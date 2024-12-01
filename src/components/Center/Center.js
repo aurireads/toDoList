@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles.css";
 
-const Center = () => {
+const Center = ({ scrollToTodoList }) => {
   return (
     <div className="center">
       <div className="middle">
         <h2>Organize</h2>
         <h3>your daily jobs</h3>
         <p>The only way to get things done</p>
-        <button>Go to To-do list</button>
+        <button onClick={scrollToTodoList}>Go to To-do list</button>
       </div>
       <div className="image-container">
         <img src="/images/BG.png" alt="Background" className="bg-image" />

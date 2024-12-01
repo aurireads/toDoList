@@ -1,74 +1,138 @@
 .modal-container {
-    position: relative;
-    width: 400px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-family: Arial, sans-serif;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.modal-container .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: clamp(16px, 4vw, 20px);
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 5px;
+  z-index: 10;
+}
+
+.modal-container .close-btn:hover {
+  color: #000;
+}
+
+.modal-container .modal-image {
+  width: clamp(60px, 25%, 80px);
+  height: clamp(60px, 25%, 80px);
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+.modal-container h2 {
+  font-size: clamp(20px, 6vw, 24px);
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.modal-container p {
+  font-size: clamp(14px, 4vw, 16px);
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.modal-container input[type="text"],
+.modal-container input[type="password"] {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+  font-size: 16px; /* Prevents auto-zoom on iOS */
+}
+
+.modal-container button {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-size: clamp(14px, 4vw, 16px);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.modal-container button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+  .modal-container {
+    width: 95%;
+    padding: 15px;
+    margin: 10px auto;
   }
-  
+
   .modal-container .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 16px;
-    color: #666;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    font-size: 18px;
+    top: 5px;
+    right: 10px;
   }
-  
-  .modal-container .close-btn:hover {
-    color: #000;
-  }
-  
+
   .modal-container .modal-image {
-    width: 80px;
-    height: 80px; 
-    margin: 0 auto 20px;
-    display: block;
-    border-radius: 50%; 
+    width: clamp(50px, 20%, 70px);
+    height: clamp(50px, 20%, 70px);
+    margin-bottom: 15px;
   }
-  
+
   .modal-container h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 18px;
   }
-  
+
   .modal-container p {
-    font-size: 16px;
-    color: #4caf50;
-    margin-bottom: 20px;
+    font-size: 14px;
   }
-  
+
   .modal-container input[type="text"],
   .modal-container input[type="password"] {
-    width: 90%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 14px;
   }
-  
+
   .modal-container button {
-    width: 90%;
     padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
   }
-  
-  .modal-container button:hover {
-    background-color: #45a049;
+}
+
+/* Accessibility Enhancements */
+@media (max-width: 768px) {
+  /* Ensure touch targets are at least 44x44 pixels */
+  .modal-container button,
+  .modal-container input[type="text"],
+  .modal-container input[type="password"],
+  .modal-container .close-btn {
+    min-height: 44px;
   }
-  
+}
+
+/* Prevent automatic zoom on input focus in iOS */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  font-size: 16px;
+}

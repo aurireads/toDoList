@@ -1,92 +1,100 @@
+.image-icon {
+  margin-top: 20px;
+}
+
 .button-login {
-  font-size: 14px; /* Tamanho da fonte menor */
-  padding: 5px 10px; /* Reduz o espaçamento interno */
-  background-color: black; /* Verde para o botão */
-  color: white; /* Texto branco */
-  border: none; /* Remove borda */
-  border-radius: 5px; /* Bordas arredondadas */
-  cursor: pointer; /* Mostra o ponteiro ao passar o mouse */
-  transition: background-color 0.3s ease; /* Transição suave no hover */
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button-login:hover {
-  background-color: #3c9e47; /* Verde mais escuro no hover */
+  background-color: #3c9e47;
 }
 
 .modal-content {
   background: white;
-  width: 400px; /* Largura do modal */
-  padding: 40px 30px; /* Espaçamento interno */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra para destaque */
+  width: 90%;
+  max-width: 400px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   position: relative;
   font-family: "Poppins", sans-serif;
-  text-align: left; /* Alinhamento à esquerda */
+  text-align: left;
 }
 
 .modal-content img {
-  width: 60px; /* Tamanho da imagem no topo */
+  width: 60px;
   height: auto;
-  margin-bottom: 20px; /* Espaçamento entre a imagem e o título */
+  margin-bottom: 20px;
 }
 
 .modal-content h2 {
-  font-size: 38px; /* Tamanho maior do título */
+  font-size: 32px;
   font-weight: bold;
   color: #000;
   margin-bottom: 10px;
 }
 
 .modal-content p {
-  font-size: 16px;
-  color: #2a5d35; /* Verde para o subtítulo */
+  font-size: 14px;
+  color: #2a5d35;
   margin-bottom: 30px;
 }
 
 .modal-content label {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   margin-bottom: 5px;
 }
 
 .modal-content input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 8px;
+  margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .modal-content button {
-  color: black;/* Verde do botão */
+  color: black;
   border: none;
   cursor: pointer;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 14px;
 }
 
 .modal-content button:hover {
-  background-color: #1e4b28; /* Verde mais escuro no hover */
+  background-color: #1e4b28;
 }
 
 .close-button {
   position: absolute;
-  top: 5px; /* Mais próximo do topo */
-  right: 5px; /* Mais próximo do canto direito */
-  font-size: 12px; /* Diminui o tamanho do texto do botão */
-  font-weight: bold; /* Mantém o texto em negrito */
-  color: #000; /* Cor do "X" */
-  background: none; /* Remove o fundo do botão */
-  border: none; /* Remove a borda padrão */
-  cursor: pointer; /* Mostra o ponteiro de mão ao passar o mouse */
-  padding: 0; /* Remove qualquer padding */
-  line-height: 1; /* Garante alinhamento correto */
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
 }
 
 .close-button:hover {
-  color: #666; /* Altera a cor ao passar o mouse */
-  transform: scale(1.2); /* Leve aumento no hover para destacar */
-  transition: transform 0.2s ease; /* Transição suave no hover */
+  color: #666;
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
 }
 
 .modal-overlay {
@@ -95,7 +103,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,4 +112,34 @@
 
 .button-submit {
   background: #4AC959;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 30px 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 28px;
+  }
+
+  .modal-content p {
+    font-size: 12px;
+  }
+
+  .modal-content label {
+    font-size: 10px;
+  }
+
+  .modal-content input {
+    font-size: 10px;
+  }
+
+  .modal-content button {
+    font-size: 12px;
+  }
+
+  .close-button {
+    font-size: 12px;
+  }
 }

@@ -1,16 +1,28 @@
+/* Reset padrão */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/* Estrutura geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Menu */
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 45px 50px;
+  padding: 0 20px 30px;
 }
 
+/* Modal Responsivo */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -27,13 +39,15 @@
 .modal {
   background: #fff;
   border-radius: 8px;
-  width: 400px;
+  width: 90%; /* Largura ajustada para dispositivos menores */
+  max-width: 400px;
   padding: 20px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
+/* Conteúdo dentro do modal */
 .modal h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -79,182 +93,79 @@
   font-weight: bold;
 }
 
+/* Design responsivo com flexbox para imagem e texto */
 .sign-in {
   display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-.acess-list {
-  color: #4AC959;
-}
-
-.main {
-  padding: 30px 0;
-}
-
-h2 {
-  width: 621px;
-  height: 35px;
-  top: 208px;
-  left: 80px;
-}
-
-.foto-black {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 190px;
+.sign-in img {
+  width: 80px; /* Ajuste do tamanho da imagem */
   height: auto;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  min-height: 100vh;
+.sign-in .text {
+  text-align: left;
 }
 
-.App {
-  width: 100%;
-  margin: 0 auto;
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .modal {
+    width: 90%; /* Ocupa quase toda a largura da tela */
+    padding: 15px;
+  }
+
+  .sign-in {
+    flex-direction: column; /* Alinha a imagem acima do texto */
+  }
+
+  .sign-in img {
+    width: 60px; /* Reduz o tamanho da imagem */
+    margin-bottom: 15px;
+  }
+
+  .sign-in .text {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
+/* Para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .modal {
+    padding: 10px;
+  }
 
-ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 1em;
-  border-bottom: 1px solid #eaeaea;
-  padding-bottom: 5px;
-}
+  .modal h2 {
+    font-size: 1rem;
+  }
 
-button {
-  width: 100%;
-  padding: 10px;
-  font-size: 1em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-}
+  .modal p {
+    font-size: 0.8rem;
+  }
 
-button:hover {
-  background-color: #333;
-}
-
-input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-input:focus {
-  outline: none;
-  border-color: orange;
-}
-
-.task-text span {
-  cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-.task-text span:hover {
-  border-color: orange;
-  background-color: orange;
-}
-
-li {
-  cursor: grab;
-  padding: 10px;
-  border-bottom: 1px solid #eaeaea;
-}
-
-li:active {
-  cursor: grabbing;
-}
-
-.card {
-  border: 2px dashed transparent;
-  transition: border-color 0.3s;
-}
-
-.card:hover {
-  border-color: lightblue;
-}
-
-.card.drag-over {
-  border-color: orange;
-}
-
-.add-task {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.add-task input {
-  flex: 1;
-  padding: 10px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-.add-task button {
-  padding: 10px 15px;
-  font-size: 1em;
-  color: white;
-  background-color: orange;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.add-task button:hover {
-  background-color: darkorange;
-}
-
-.erase-all {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.erase-all button {
-  padding: 10px 20px;
-  font-size: 1em;
-  color: white;
-  background-color: red;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.erase-all button:hover {
-  background-color: darkred;
-}
-
-.header {
-  margin-bottom: 20px;
-}
-
-.img-form {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 20px;
+  .modal button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }

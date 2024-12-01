@@ -6,6 +6,15 @@
   height: 1200px;
 }
 
+.middle {
+  width: 621px;
+  height: 319px;
+  text-align: left;
+  position: absolute;
+  top: 208px;
+  left: 80px;
+}
+
 .middle button {
   width: 300px;
   height: 64px;
@@ -46,18 +55,8 @@
   margin-top: 40px;
 }
 
-
 .middle button:hover {
   background: #4AC959;
-}
-
-.middle {
-  width: 621px;
-  height: 319px;
-  text-align: left;
-  position: absolute;
-  top: 208px;
-  left: 80px;
 }
 
 .image-container {
@@ -113,9 +112,17 @@
     font-size: 18px;
   }
 
+  .middle button {
+    width: 100%;
+    max-width: 300px;
+    position: static;
+  }
+
   .image-container {
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-left: 0;
   }
 
   .bg-image {
@@ -125,35 +132,9 @@
 
   .foto-image {
     width: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .middle button {
-    width: 200px;
-    height: 50px;
-    top: 200px;
-    font-size: 18px;
-  }
-
-  .middle h2 {
-    font-size: 50px;
-  }
-
-  .middle h3 {
-    font-size: 30px;
-  }
-
-  .middle p {
-    font-size: 16px;
-  }
-
-  .image-container {
-    width: 300px;
-    height: 200px;
-  }
-
-  .foto-image {
-    width: 250px;
+    top: auto;
+    left: auto;
+    transform: none;
+    position: relative;
   }
 }

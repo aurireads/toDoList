@@ -3,23 +3,21 @@ import Modal from "./Modal"; // Importando o componente Modal
 import "./styles.css";
 
 const Menu = ({ isLoggedIn, loginData, handleLogout }) => {
-  // Aqui é definido o estado para controlar a abertura e o fechamento do modal
+  // Estado para controlar o modal
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
-  // Função para abrir o modal
-  const handleOpenModal = () => {
-    setIsLoginModalOpen(true);
-  };
-
-  // Função para fechar o modal
-  const handleCloseModal = () => {
-    setIsLoginModalOpen(false);
-  };
+  // Função para abrir e fechar o modal
+  const handleOpenModal = () => setIsLoginModalOpen(true);
+  const handleCloseModal = () => setIsLoginModalOpen(false);
 
   return (
     <div className="menu">
+      {/* Logo */}
       <div className="logo">
+        <img src="/images/icon.png" alt="App Icon" className="image-icon" />
       </div>
+
+      {/* Botões e mensagem de login */}
       <div className="item-menu">
         {isLoggedIn ? (
           <>
@@ -27,13 +25,13 @@ const Menu = ({ isLoggedIn, loginData, handleLogout }) => {
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
-          // Quando o usuário não está logado, exibimos o botão "Entrar" que abre o modal
           <button className="button-login" onClick={handleOpenModal}>
-  Entrar
-</button>
-
+            Entrar
+          </button>
         )}
       </div>
+
+      {/* Modal */}
       <Modal isOpen={isLoginModalOpen} closeModal={handleCloseModal} />
     </div>
   );
