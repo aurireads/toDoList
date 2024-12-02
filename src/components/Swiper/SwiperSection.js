@@ -18,11 +18,11 @@ const SwiperSection = ({ images }) => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={1} 
-        spaceBetween={0} 
+        slidesPerView={1}
+        spaceBetween={0}
         breakpoints={{
           768: {
-            slidesPerView: 1, 
+            slidesPerView: 1,
           },
         }}
         coverflowEffect={{
@@ -34,26 +34,26 @@ const SwiperSection = ({ images }) => {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        style={{width: '500px', height:'600px', zIndex: '1000'}}
+        style={{ width: '500px', height: '600px', zIndex: '1000' }}
 
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index} style={{ justifyContent: 'center', display: 'flex', margin: 'auto'}}>
-            
+          <SwiperSlide key={index} style={{ justifyContent: 'center', display: 'flex', margin: 'auto' }}>
+
             <div className="swiper-info">
-            <img
-              src={image}
-              alt={`slide_image_${index + 1}`}
-              loading="lazy"
-              onError={(e) => (e.target.src = "https://via.placeholder.com/600x400")}
-              className="img-content"
-            />
-            <img src="/images/BG.png" alt="" className="swiper-decoration" />
-            <div className="subtitle-content">
-              function
-            </div>
-            <p className="description-content">Organize your daily job enhance your life performance</p>
-            <a href="" className="more-content">read more</a>
+              <img
+                src={image}
+                alt={`slide_image_${index + 1}`}
+                loading="lazy"
+                onError={(e) => (e.target.src = "https://via.placeholder.com/600x400")}
+                className="img-content"
+              />
+              <img src="/images/BG.png" alt="" className="swiper-decoration" />
+              <div className="subtitle-content">
+                function
+              </div>
+              <p className="description-content">Organize your daily job enhance your life performance</p>
+              <a href="" className="more-content">read more</a>
             </div>
           </SwiperSlide>
         ))}

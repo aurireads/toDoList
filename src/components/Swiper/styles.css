@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 2000px; 
+  max-width: 2000px;
   height: auto;
   overflow: hidden;
   position: relative;
@@ -26,7 +26,7 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  object-fit: contain; 
+  object-fit: contain;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -68,7 +68,10 @@
   margin-bottom: 40px;
 }
 
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: var(--swiper-pagination-bottom, 30px);
   top: var(--swiper-pagination-top, auto);
   left: 0;
@@ -79,11 +82,11 @@
   width: 86px;
   height: 31px;
   border-radius: 16px;
-  border: 1px solid #9499B3; 
+  border: 1px solid #9499B3;
   padding: 6px 12px;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #9499B3;
   margin: 23px;
 }
@@ -122,7 +125,8 @@
   margin-right: 20px;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin-right: 15px;
 }
 
@@ -155,26 +159,26 @@
 
 @media (max-width: 768px) {
   .swiper-background {
-    width: 90%; /* Ajusta a largura para caber melhor em telas menores */
-    height: auto; /* Deixa a altura ajustável */
-    border-radius: 5px; /* Reduz o raio dos cantos */
-    margin-bottom: 4rem; /* Ajusta o espaçamento */
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 4rem;
   }
 
   .heading {
-    font-size: 32px; /* Diminui o tamanho da fonte */
+    font-size: 32px;
     line-height: 36px;
-    margin: 20px; /* Reduz o espaçamento */
-    text-align: center; /* Centraliza o texto */
+    margin: 20px;
+    text-align: center;
   }
 
   .swiper-info {
-    height: auto; /* Permite altura ajustável */
-    width: 90%; /* Reduz largura para caber em telas menores */
+    height: auto;
+    width: 90%;
     margin-bottom: 20px;
   }
 
   .swiper-container {
-    margin-top: 5rem; /* Reduz o espaçamento superior */
+    margin-top: 5rem;
   }
 }

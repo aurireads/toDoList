@@ -33,10 +33,8 @@ const App = () => {
 
   const slideImages = ["/images/1.png", "/images/2.png", "/images/3.png"];
 
-  // Referência para a seção ToDoList
   const toDoListRef = useRef(null);
 
-  // Função para rolar até a seção ToDoList
   const scrollToTodoList = () => {
     if (toDoListRef.current) {
       toDoListRef.current.scrollIntoView({ behavior: "smooth" });

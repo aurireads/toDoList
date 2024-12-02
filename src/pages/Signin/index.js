@@ -4,7 +4,7 @@ import './styles.css';
 const Signin = () => {
   return (
     <div className="modal-container">
-      <span className="close-btn">&times;</span> 
+      <span className="close-btn">&times;</span>
       <img src="/images/icon.png" alt="Logo" />
 
       <h2>Sign in</h2>

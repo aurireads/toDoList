@@ -1,4 +1,3 @@
-/* Container principal */
 .container {
   display: flex;
   margin: auto;
@@ -18,7 +17,7 @@
   z-index: -100;
 }
 
-.header div{
+.header div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,8 +39,8 @@
   line-height: 60px;
   margin-bottom: 2.5rem;
   text-decoration: underline;
-  text-decoration-color: #4ac959; 
-  text-decoration-thickness: 3px; 
+  text-decoration-color: #4ac959;
+  text-decoration-thickness: 3px;
   text-underline-offset: 13px;
   text-align: center;
 }
@@ -63,7 +62,7 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s, transform 0.3s; /* Transições suaves */
+  transition: box-shadow 0.3s, transform 0.3s;
   margin-bottom: 30px;
 }
 
@@ -75,7 +74,6 @@
   margin-bottom: 5rem;
 }
 
-/* Estilos para os headers dos cards (To-do e Done) */
 .card-header {
   text-align: center;
   font-size: 1.5em;
@@ -84,7 +82,6 @@
   padding: 10px 0;
 }
 
-/* Estilos específicos para To-do e Done */
 .card-header.to-do {
   border-top: 20px solid #E88D39;
 }
@@ -105,7 +102,6 @@
   height: 100%;
 }
 
-/* Subtítulo do card */
 .card-subtitle {
   text-align: center;
   font-size: 0.9em;
@@ -113,14 +109,12 @@
   color: #555;
 }
 
-/* Lista de tarefas */
 ul {
   list-style: none;
   padding: 0;
   flex: 1;
 }
 
-/* Estilo dos itens da lista de tarefas */
 ul li {
   display: flex;
   align-items: center;
@@ -129,7 +123,7 @@ ul li {
   font-size: 1em;
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 5px;
-  cursor: grab; /* Alteração do cursor ao arrastar */
+  cursor: grab;
 }
 
 ul li:active {
@@ -142,7 +136,6 @@ ul li .task-text {
   gap: 10px;
 }
 
-/* Caixa de seleção (✔) */
 ul li .task-text span {
   display: flex;
   align-items: center;
@@ -154,14 +147,12 @@ ul li .task-text span {
   cursor: pointer;
 }
 
-/* Tarefa concluída (✔) */
 ul li .task-text span.checked {
   border-color: #4AC959;
   background-color: #4AC959;
   color: white;
 }
 
-/* Estilo de exclusão */
 ul li .delete {
   color: #999999;
   cursor: pointer;
@@ -171,7 +162,6 @@ ul li .delete {
   line-height: 24px;
 }
 
-/* Estilo do botão */
 button {
   width: 100%;
   padding: 10px;
@@ -192,7 +182,6 @@ button:hover {
   background-color: #333;
 }
 
-/* Estilo do input */
 input {
   width: calc(100% - 20px);
   padding: 10px;
@@ -207,18 +196,15 @@ input:focus {
   border-color: orange;
 }
 
-/* Efeito hover nos cards */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Destaque da área ao arrastar */
 .card.drag-over {
   border-color: orange;
 }
 
-/* Estilo para os botões de "Add Task" e "Erase All" */
 .add-task {
   display: flex;
   align-items: center;
@@ -249,7 +235,6 @@ input:focus {
   background-color: darkorange;
 }
 
-/* Estilos para apagar todas as tarefas */
 .erase-all {
   margin-top: 20px;
   text-align: center;
@@ -313,7 +298,6 @@ input:focus {
   }
 }
 
-/* Flexible Input and Button Styles */
 .add-task {
   display: flex;
   align-items: center;
@@ -330,14 +314,16 @@ input:focus {
   margin-right: 10px;
 }
 
-input, button {
+input,
+button {
   max-width: 500px;
 }
 
-/* Accessibility and Touch Improvements */
 @media (max-width: 480px) {
-  input, button {
-    min-height: 44px; /* Recommended touch target size */
+
+  input,
+  button {
+    min-height: 44px;
   }
 
   ul li {
@@ -345,7 +331,6 @@ input, button {
   }
 }
 
-/* Card and List Responsiveness */
 ul li {
   display: flex;
   align-items: center;
@@ -355,12 +340,10 @@ ul li {
   padding-bottom: 10px;
 }
 
-/* Flexible delete and task text */
 ul li .delete {
   margin-left: auto;
 }
 
-/* General Responsive Principles */
 * {
   box-sizing: border-box;
 }
@@ -371,7 +354,6 @@ body {
   line-height: 1.6;
 }
 
-/* Retain original styles not impacted by responsiveness */
 .card-header {
   text-align: center;
   font-size: 1.5em;

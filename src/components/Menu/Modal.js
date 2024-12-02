@@ -7,11 +7,11 @@ const Modal = ({ isOpen, closeModal }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-      <button className="close-button" onClick={closeModal}>
-  ×
-</button>
-        <img 
-          src="/images/login.png" 
+        <button className="close-button" onClick={closeModal}>
+          ×
+        </button>
+        <img
+          src="/images/login.png"
           alt="Login Icon"
         />
         <h2>Sign in</h2>
@@ -22,7 +22,7 @@ const Modal = ({ isOpen, closeModal }) => {
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" />
           <button type="submit" className="button-submit">Sign in</button>
-          </form>
+        </form>
       </div>
     </div>
   );

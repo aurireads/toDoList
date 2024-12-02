@@ -3,22 +3,22 @@
 }
 
 .button-login {
-  font-size: 16px; /* Tamanho do texto */
-  font-family: "Arial", sans-serif; /* Fonte */
-  font-weight: bold; /* Deixa a fonte em negrito */
-  padding: 7px 22px; /* Ajusta o tamanho interno */
-  background-color: black; /* Cor de fundo preta */
-  color: white; /* Cor do texto branca */
-  border: none; /* Remove borda */
-  cursor: pointer; /* Mostra o cursor de clique */
-  text-transform: lowercase; /* Garante que o texto esteja em minúsculas */
-  display: inline-block; /* Mantém o botão no tamanho correto */
-  border-radius: 0; /* Remove bordas arredondadas */
-  transition: background-color 0.3s ease; /* Suaviza a transição */
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  padding: 7px 22px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: lowercase;
+  display: inline-block;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
 }
 
 .button-login:hover {
-  background-color: #3c9e47; /* Troca para verde no hover */
+  background-color: #3c9e47;
 }
 
 .modal-content {
@@ -79,28 +79,26 @@
 
 .close-button {
   position: absolute;
-  top: 10px; /* Mantém a distância do topo */
-  left: 160px; /* Alinha o botão à esquerda */
+  top: 10px;
+  left: 160px;
   font-size: 14px;
   font-weight: bold;
-  color: #000; /* Apenas a cor do texto */
-  background: none; /* Sem cor de fundo */
-  border: none; /* Remove bordas */
-  cursor: pointer; /* Mostra o cursor de clique */
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
   padding: 0;
   line-height: 1;
 }
 
 .close-button:hover,
 .close-button:focus {
-  color: #666; /* Apenas altera a cor do texto no hover */
-  background: none; /* Garante que não terá fundo no hover */
-  outline: none; /* Remove o contorno padrão */
-  transform: scale(1.2); /* Efeito de escala */
+  color: #666;
+  background: none;
+  outline: none;
+  transform: scale(1.2);
   transition: transform 0.2s ease;
 }
-
-
 
 .modal-overlay {
   position: fixed;

@@ -2,33 +2,28 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const ToDoList = () => {
-  // Estados para gerenciar tarefas
   const [toDoTasks, setToDoTasks] = useState([]);
   const [doneTasks, setDoneTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [draggedTask, setDraggedTask] = useState(null);
   const [draggedFrom, setDraggedFrom] = useState(null);
 
-  // Função para adicionar uma nova tarefa
   const addTask = () => {
     if (newTask.trim() === "") return;
     setToDoTasks((prev) => [...prev, newTask.trim()]);
     setNewTask("");
   };
 
-  // Função para apagar todas as tarefas de uma categoria
   const eraseAll = (target) => {
     if (target === "toDo") setToDoTasks([]);
     if (target === "done") setDoneTasks([]);
   };
 
-  // Função de arrastar início
   const handleDragStart = (task, from) => {
     setDraggedTask(task);
     setDraggedFrom(from);
   };
 
-  // Função para soltar tarefas em uma nova categoria
   const handleDrop = (target) => {
     if (!draggedTask || !draggedFrom) return;
 
@@ -44,14 +39,12 @@ const ToDoList = () => {
     setDraggedFrom(null);
   };
 
-  // Função para deletar uma tarefa específica
   const deleteTask = (index) => {
     setDoneTasks((prev) => prev.filter((_, i) => i !== index));
   };
 
   return (
     <div className="container">
-      {/* Cabeçalho */}
       <div className="header">
         <img src="/images/Black.png" alt="Logo" className="header-image" />
         <div className="header-content">
@@ -63,7 +56,6 @@ const ToDoList = () => {
         </div>
       </div>
 
-      {/* Seção To-Do */}
       <div className="card-container">
         <div
           className="card to-do"
@@ -100,7 +92,6 @@ const ToDoList = () => {
           </div>
         </div>
 
-        {/* Seção Done */}
         <div
           className="card done"
           onDragOver={(e) => e.preventDefault()}

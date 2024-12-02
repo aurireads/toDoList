@@ -4,7 +4,6 @@ import "./style.css";
 const Form = ({ formData, handleChange, handleSubmit }) => {
   return (
     <div className="form-container">
-      {/* Seção de título e ícone */}
       <div className="form-header">
         <img src="/images/icon-mail.png" className="icon-mail" alt="Mail Icon" />
         <h1>
@@ -12,10 +11,8 @@ const Form = ({ formData, handleChange, handleSubmit }) => {
         </h1>
       </div>
 
-      {/* Imagem circular superior */}
       <img src="/images/tatiana.png" className="img-form" alt="Illustration" />
 
-      {/* Formulário */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Your name</label>
         <input

@@ -33,7 +33,7 @@
   height: clamp(60px, 25%, 80px);
   margin: 0 auto 20px;
   display: block;
-  border-radius: 50%; 
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -59,7 +59,7 @@
   border-radius: 5px;
   display: block;
   box-sizing: border-box;
-  font-size: 16px; /* Prevents auto-zoom on iOS */
+  font-size: 16px;
 }
 
 .modal-container button {
@@ -81,7 +81,6 @@
   background-color: #45a049;
 }
 
-/* Responsive Adjustments */
 @media screen and (max-width: 480px) {
   .modal-container {
     width: 95%;
@@ -120,9 +119,8 @@
   }
 }
 
-/* Accessibility Enhancements */
 @media (max-width: 768px) {
-  /* Ensure touch targets are at least 44x44 pixels */
+
   .modal-container button,
   .modal-container input[type="text"],
   .modal-container input[type="password"],
@@ -131,7 +129,6 @@
   }
 }
 
-/* Prevent automatic zoom on input focus in iOS */
 input[type="text"]:focus,
 input[type="password"]:focus {
   font-size: 16px;
