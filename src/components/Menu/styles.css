@@ -3,19 +3,25 @@
 }
 
 .button-login {
-  font-size: 14px;
-  padding: 5px 10px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px; /* Tamanho do texto */
+  font-family: "Arial", sans-serif; /* Fonte */
+  font-weight: bold; /* Deixa a fonte em negrito */
+  padding: 7px 22px; /* Ajusta o tamanho interno */
+  background-color: black; /* Cor de fundo preta */
+  color: white; /* Cor do texto branca */
+  border: none; /* Remove borda */
+  cursor: pointer; /* Mostra o cursor de clique */
+  text-transform: lowercase; /* Garante que o texto esteja em minúsculas */
+  display: inline-block; /* Mantém o botão no tamanho correto */
+  border-radius: 0; /* Remove bordas arredondadas */
+  transition: background-color 0.3s ease; /* Suaviza a transição */
 }
 
 .button-login:hover {
-  background-color: #3c9e47;
+  background-color: #3c9e47; /* Troca para verde no hover */
 }
+
+
 
 .modal-content {
   background: white;
@@ -74,7 +80,7 @@
 }
 
 .modal-content button:hover {
-  background-color: #1e4b28;
+  
 }
 
 .close-button {
@@ -83,19 +89,23 @@
   right: 10px;
   font-size: 14px;
   font-weight: bold;
-  color: #000;
-  background: none;
-  border: none;
-  cursor: pointer;
+  color: #000; /* Apenas a cor do texto */
+  background: none; /* Sem cor de fundo */
+  border: none; /* Remove bordas */
+  cursor: pointer; /* Mostra o cursor de clique */
   padding: 0;
   line-height: 1;
 }
 
-.close-button:hover {
-  color: #666;
-  transform: scale(1.2);
+.close-button:hover,
+.close-button:focus {
+  color: #666; /* Apenas altera a cor do texto no hover */
+  background: none; /* Garante que não terá fundo no hover */
+  outline: none; /* Remove o contorno padrão */
+  transform: scale(1.2); /* Efeito de escala */
   transition: transform 0.2s ease;
 }
+
 
 .modal-overlay {
   position: fixed;

@@ -1,17 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
-const ToDoList = ({
-  toDoTasks,
-  doneTasks,
-  newTask,
-  setNewTask,
-  addTask,
-  eraseAll,
-  handleDragStart,
-  handleDrop,
-  deleteTask,
-}) => {
+const ToDoList = () => {
+  // Estados para gerenciar tarefas
+  const [toDoTasks, setToDoTasks] = useState([]);
+  const [doneTasks, setDoneTasks] = useState([]);
+  const [newTask, setNewTask] = useState("");
+  const [draggedTask, setDraggedTask] = useState(null);
+  const [draggedFrom, setDraggedFrom] = useState(null);
+
+  // Função para adicionar uma nova tarefa
+  const addTask = () => {
+    if (newTask.trim() === "") return;
+    setToDoTasks((prev) => [...prev, newTask.trim()]);
+    setNewTask("");
+  };
+
+  // Função para apagar todas as tarefas de uma categoria
+  const eraseAll = (target) => {
+    if (target === "toDo") setToDoTasks([]);
+    if (target === "done") setDoneTasks([]);
+  };
+
+  // Função de arrastar início
+  const handleDragStart = (task, from) => {
+    setDraggedTask(task);
+    setDraggedFrom(from);
+  };
+
+  // Função para soltar tarefas em uma nova categoria
+  const handleDrop = (target) => {
+    if (!draggedTask || !draggedFrom) return;
+
+    if (target === "toDo" && draggedFrom === "done") {
+      setToDoTasks((prev) => [...prev, draggedTask]);
+      setDoneTasks((prev) => prev.filter((task) => task !== draggedTask));
+    } else if (target === "done" && draggedFrom === "toDo") {
+      setDoneTasks((prev) => [...prev, draggedTask]);
+      setToDoTasks((prev) => prev.filter((task) => task !== draggedTask));
+    }
+
+    setDraggedTask(null);
+    setDraggedFrom(null);
+  };
+
+  // Função para deletar uma tarefa específica
+  const deleteTask = (index) => {
+    setDoneTasks((prev) => prev.filter((_, i) => i !== index));
+  };
+
   return (
     <div className="container">
       {/* Cabeçalho */}
@@ -58,8 +95,8 @@ const ToDoList = ({
               onChange={(e) => setNewTask(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && addTask()}
             />
-            <button onClick={addTask}>Add Task</button>
-            <button onClick={() => eraseAll("toDo")}>Erase All</button>
+            <button onClick={addTask}>add task</button>
+            <button onClick={() => eraseAll("toDo")}>erase all</button>
           </div>
         </div>
 
@@ -90,12 +127,12 @@ const ToDoList = ({
                     {task}
                   </div>
                   <span className="delete" onClick={() => deleteTask(index)}>
-                    Delete
+                    delete
                   </span>
                 </li>
               ))}
             </ul>
-            <button onClick={() => eraseAll("done")}>Erase All</button>
+            <button onClick={() => eraseAll("done")}>erase all</button>
           </div>
         </div>
       </div>
